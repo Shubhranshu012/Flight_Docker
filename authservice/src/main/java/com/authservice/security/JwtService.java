@@ -9,24 +9,21 @@ import com.authservice.model.EROLE;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
-
+import org.springframework.beans.factory.annotation.Value;
 @Service
 public class JwtService {
-
-    private final String SECRET = "THIS_IS_A_VERY_LONG_SECRET_KEY_FOR_JWT_TOKEN_256";
+	
+	@Value("${jwt.secret}")
+    private String SECRET;
 
     private Key getSignKey() {
         return Keys.hmacShaKeyFor(SECRET.getBytes());
     }
 
     public String generateToken(String username, EROLE role) {
-        return Jwts.builder()
-                .setSubject(username)
-                .claim("role", role.name())
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
-                .signWith(getSignKey(), SignatureAlgorithm.HS256)
-                .compact();
+        return Jwts.builder().setSubject(username).claim("role", role.name())
+                .setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis() + 1000*60*60*24))
+                .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
     }
 
     public String extractUsername(String token) {
@@ -38,11 +35,8 @@ public class JwtService {
     }
 
     private Claims extractAllClaims(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(getSignKey())
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
+        return Jwts.parserBuilder().setSigningKey(getSignKey()).build()
+                .parseClaimsJws(token).getBody();
     }
 }
 

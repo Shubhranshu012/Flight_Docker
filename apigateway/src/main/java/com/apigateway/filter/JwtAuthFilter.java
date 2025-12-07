@@ -26,7 +26,7 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
         if (path.contains("/auth")) {
             return chain.filter(exchange); 
         }
-        if (path.startsWith("/booking/search")) {
+        if (path.startsWith("/FLIGHTSERVICE/api/flight/search")) {
             return chain.filter(exchange);
         }
 
@@ -47,12 +47,12 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
             return exchange.getResponse().setComplete();
         }
 
-        if (path.startsWith("/flight") && !role.equals("ADMIN")) {
+        if (path.startsWith("/FLIGHTSERVICE") && !role.equals("ADMIN")) {
             exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
             return exchange.getResponse().setComplete();
         }
 
-        if (path.startsWith("/booking") && !role.equals("USER")) {
+        if (path.startsWith("/BOOKINGSERVICE") && !role.equals("USER")) {
             exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
             return exchange.getResponse().setComplete();
         }
