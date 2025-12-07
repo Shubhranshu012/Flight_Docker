@@ -1,0 +1,5 @@
+package com.flightservice.model;
+
+public enum AIRPORT_NAME {
+    DELHI,MUMBAI,BANGALORE,HYDERABAD,CHENNAI,KOLKATA,BHUBANESWAR
+}
