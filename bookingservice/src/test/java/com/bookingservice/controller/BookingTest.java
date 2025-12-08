@@ -4,7 +4,9 @@ import com.bookingservice.dto.BookingRequestDto;
 import com.bookingservice.dto.FlightInventoryDto;
 import com.bookingservice.dto.PassengerDto;
 import com.bookingservice.feign.FlightInterface;
+import com.bookingservice.kafka.BookingProducer;
 import com.bookingservice.repository.BookingRepository;
+import com.bookingservice.repository.PassengerRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -41,6 +43,12 @@ public class BookingTest {
 
     @MockBean
     private FlightInterface flightClient;
+    
+    @MockBean
+    private BookingProducer bookingProducer;
+    
+    @MockBean
+    private PassengerRepository passengerRepo;
 
     private String inventoryId = "INV123";
     private String inventoryIdLowSeat = "INV999";
