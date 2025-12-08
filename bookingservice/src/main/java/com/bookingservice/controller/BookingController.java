@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bookingservice.dto.BookingRequestDto;
-import com.bookingservice.model.Booking;
 import com.bookingservice.service.implementation.BookingServiceImplementation;
 
 import jakarta.validation.Valid;

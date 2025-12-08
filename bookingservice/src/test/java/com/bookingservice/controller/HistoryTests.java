@@ -58,17 +58,17 @@ class HistoryTests {
         Passenger passenger = Passenger.builder().id("PAS1").bookingId(bookingId).flightInventoryId(inventoryId)
                 .name("Rohit").gender(GENDER.MALE).age(28).seatNumber("12A").mealOption("VEG").build();
 
-        when(bookingRepo.findByPnrAndStatus(eq(pnr), eq(BOOKING_STATUS.BOOKED))).thenReturn(booking);
+        when(bookingRepo.findByPnrAndStatus(pnr, BOOKING_STATUS.BOOKED)).thenReturn(booking);
 
-        when(bookingRepo.findByPnrAndStatus(eq("INVALID"), eq(BOOKING_STATUS.BOOKED))).thenReturn(null);
+        when(bookingRepo.findByPnrAndStatus("INVALID",BOOKING_STATUS.BOOKED)).thenReturn(null);
 
-        when(bookingRepo.findByEmailAndStatus(eq("test@gmail.com"), eq(BOOKING_STATUS.BOOKED))).thenReturn(List.of(booking));
+        when(bookingRepo.findByEmailAndStatus("test@gmail.com",BOOKING_STATUS.BOOKED)).thenReturn(List.of(booking));
 
-        when(bookingRepo.findByEmailAndStatus(eq("INVALID"), eq(BOOKING_STATUS.BOOKED))).thenReturn(List.of());
+        when(bookingRepo.findByEmailAndStatus("INVALID",BOOKING_STATUS.BOOKED)).thenReturn(List.of());
 
-        when(passengerRepo.findByBookingId(eq(bookingId))).thenReturn(List.of(passenger));
+        when(passengerRepo.findByBookingId(bookingId)).thenReturn(List.of(passenger));
 
-        when(bookingRepo.save(any())).thenAnswer(invocation -> invocation.getArgument(0));
+        when(bookingRepo.save(any())).thenAnswer(output -> output.getArgument(0));
 
         when(flightClient.updateAvailableSeat(anyString(), anyInt())).thenReturn(ResponseEntity.ok(Map.of("message", "OK")));
     }

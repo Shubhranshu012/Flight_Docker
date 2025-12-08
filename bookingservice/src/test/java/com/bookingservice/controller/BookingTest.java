@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class BookingTest {
+class BookingTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -64,13 +64,13 @@ public class BookingTest {
 
         FlightInventoryDto lowSeatFlight = new FlightInventoryDto();
         lowSeatFlight.setId(inventoryIdLowSeat);
-        lowSeatFlight.setAvailableSeats(1);
+        lowSeatFlight.setAvailableSeats(0);
         lowSeatFlight.setDepartureTime(LocalDateTime.now().plusDays(2));
         lowSeatFlight.setArrivalTime(LocalDateTime.now().plusDays(2).plusHours(2));
 
-        when(flightClient.searchFlight(eq(inventoryId))).thenReturn(ResponseEntity.ok(normalFlight));
+        when(flightClient.searchFlight(inventoryId)).thenReturn(ResponseEntity.ok(normalFlight));
 
-        when(flightClient.searchFlight(eq(inventoryIdLowSeat))).thenReturn(ResponseEntity.ok(lowSeatFlight));
+        when(flightClient.searchFlight(inventoryIdLowSeat)).thenReturn(ResponseEntity.ok(lowSeatFlight));
 
         when(flightClient.updateAvailableSeat(anyString(), anyInt())).thenReturn(ResponseEntity.ok(Map.of("message", "OK")));
 
@@ -104,6 +104,23 @@ public class BookingTest {
         mockMvc.perform(post("/api/flight/booking/" + inventoryId)
                 .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(validBooking())))
                 .andExpect(status().isCreated());
+    }
+    @Test
+    void testBookTicket_InvalidEmail() throws Exception {
+        BookingRequestDto dto = validBooking();
+        dto.setEmail("invalid-email");
+
+        mockMvc.perform(post("/api/flight/booking/" + inventoryId)
+                .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto)))
+                .andExpect(status().isBadRequest());
+    }
+    void testBookTicket_NoAvailableSeats() throws Exception {
+
+        BookingRequestDto dto = validBooking();
+
+        mockMvc.perform(post("/api/flight/booking/" + inventoryIdLowSeat)
+                .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(dto)))
+                .andExpect(status().isBadRequest()); 
     }
     @Test
     void testBookTicket_InvalidGender() throws Exception {
