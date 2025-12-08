@@ -10,4 +10,6 @@ import com.flightservice.model.FlightInventory;
 public interface FlightService {
 	public FlightInventory addInventory(InventoryRequestDto dto);
 	public Map<String, List<FlightInventory>> searchFlights(SearchRequestDto searchDto);
+	public FlightInventory searchFlightBasedOnFlightNumber(String flightNumber);
+	public String changeAvaliableSeat(String flightNumber, Integer seat);
 }

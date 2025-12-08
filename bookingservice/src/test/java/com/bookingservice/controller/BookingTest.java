@@ -74,7 +74,7 @@ public class BookingTest {
 
         when(flightClient.updateAvailableSeat(anyString(), anyInt())).thenReturn(ResponseEntity.ok(Map.of("message", "OK")));
 
-        when(bookingRepo.save(any())).thenAnswer(invocation -> invocation.getArgument(0));
+        when(bookingRepo.save(any())).thenAnswer(output ->output.getArgument(0));
     }
 
     private PassengerDto passenger(String name, String gender, int age, String seat, String meal) {

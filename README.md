@@ -19,11 +19,10 @@ This project implements a Flight Booking System using Microservices architecture
 
 ## 1. Register User (POST /auth/register)
 1. Validate user details such as `username`, `password` and `Role`.
-2. Check if the username already exists in the database.
-3. Assign roles based on the provided `Role` or `ADMIN`.
-4. If validation passes, hashed password along with username and passoword is stored user in the database.
-5. Return **201 Created** if successful.
-6. If any validation fails, return **400 Bad Request**.
+2. Assign roles based on the provided `Role` or `ADMIN`.
+3. If validation passes, hashed password along with username and passoword is stored user in the database.
+4. Return **201 Created** if successful.
+5. If any validation fails, return **400 Bad Request**.
 
 ## 2. Login User (POST /auth/login)
 1. Validate user credentials by using `username` and `password`.

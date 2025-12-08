@@ -84,11 +84,11 @@ public class BookingServiceImplementation implements BookingService {
 		return pnr;
 	}
 
-	private Passenger createPassenger(PassengerDto dto, String bookingId, String flightId) {
+	private Passenger createPassenger(PassengerDto passengerDto, String bookingId, String flightId) {
 	    return Passenger.builder().bookingId(bookingId).flightInventoryId(flightId)
-	            .name(dto.getName()).gender(GENDER.valueOf(dto.getGender()
-	            .toUpperCase())).age(dto.getAge()).seatNumber(dto.getSeatNumber())
-	            .mealOption(dto.getMealOption()).build();
+	            .name(passengerDto.getName()).gender(GENDER.valueOf(passengerDto.getGender()
+	            .toUpperCase())).age(passengerDto.getAge()).seatNumber(passengerDto.getSeatNumber())
+	            .mealOption(passengerDto.getMealOption()).build();
 	}
 	public Object getHistory(String pnr) {
 		Booking currentBooking=bookingRepo.findByPnrAndStatus(pnr,BOOKING_STATUS.valueOf("BOOKED"));

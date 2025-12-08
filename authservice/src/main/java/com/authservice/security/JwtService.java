@@ -22,7 +22,7 @@ public class JwtService {
 
     public String generateToken(String username, EROLE role) {
         return Jwts.builder().setSubject(username).claim("role", role.name())
-                .setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis() + 1000*60*60*24))
+                .setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis() + 86400000))
                 .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
     }
 
