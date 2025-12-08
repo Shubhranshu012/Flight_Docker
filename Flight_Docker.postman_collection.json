@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "09c42716-6ce6-43c6-9da2-9fbb1711575e",
+		"name": "Flight_Docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49371517"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"shubhranshu_user\",\r\n  \"password\": \"1234\",\r\n  \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/AUTHSERVICE/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"AUTHSERVICE",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"shubhranshu_admin\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/AUTHSERVICE/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"AUTHSERVICE",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaHViaHJhbnNodV91c2VyIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NjUxNzM5NjEsImV4cCI6MTc2NTI2MDM2MX0.KPKmhotUl_pLW0eu27wlg_mCOX4skNPkFqlwH8-I2H",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"testuser@gmail.com\",\r\n  \"passengers\": [\r\n    {\r\n      \"name\": \"Rohit\",\r\n      \"gender\": \"MALE\",\r\n      \"age\": 28,\r\n      \"seatNumber\": \"134A\",\r\n      \"mealOption\": \"VEG\"\r\n    },\r\n    {\r\n      \"name\": \"Anita\", \r\n      \"gender\": \"FEMALE\",\r\n      \"age\": 25,\r\n      \"seatNumber\": \"122B\",\r\n      \"mealOption\": \"NON_VEG\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/BOOKINGSERVICE/api/flight/booking/69366b20b6e1a50b31e9d089",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"BOOKINGSERVICE",
+						"api",
+						"flight",
+						"booking",
+						"69366b20b6e1a50b31e9d089"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fromPlace\": \"MUMBAI\",\r\n  \"toPlace\": \"DELHI\",\r\n  \"journeyDate\": \"2026-11-26\",\r\n  \"tripType\": \"One_way\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/FLIGHTSERVICE/api/flight/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"FLIGHTSERVICE",
+						"api",
+						"flight",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Inventory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaHViaHJhbnNodV9hZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2NTE3NDAwMywiZXhwIjoxNzY1MjYwNDAzfQ.CU85Moe8Ootm6riUb4F8yDC-j9934uZbUrysA0WOEHc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"airlineName\": \"INDIGO\",\r\n  \"airlineLogo\": \"https://indigo.com/logo.png\",\r\n  \"fromPlace\": \"MUMBAI\",\r\n  \"toPlace\": \"DELHI\",\r\n  \"flightNumber\": \"6E-2339\",\r\n  \"departureTime\": \"2026-11-26T14:30:00\",\r\n  \"arrivalTime\": \"2026-11-26T16:20:00\",\r\n  \"price\": 4500,\r\n  \"totalSeats\": 180,\r\n  \"availableSeats\":180\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/FLIGHTSERVICE/api/flight/airline/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"FLIGHTSERVICE",
+						"api",
+						"flight",
+						"airline",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ticket Via Pnr",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaHViaHJhbnNodV91c2VyIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NjUxNzM5NjEsImV4cCI6MTc2NTI2MDM2MX0.KPKmhotUl_pLW0eu27wlg_mCOX4skNPkFqlwH8-I2HU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/BOOKINGSERVICE/api/flight/ticket/PNRF9955367",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"BOOKINGSERVICE",
+						"api",
+						"flight",
+						"ticket",
+						"PNRF9955367"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaHViaHJhbnNodV91c2VyIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NjUxNzM5NjEsImV4cCI6MTc2NTI2MDM2MX0.KPKmhotUl_pLW0eu27wlg_mCOX4skNPkFqlwH8-I2HU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/BOOKINGSERVICE/api/flight/booking/cancel/PNRF9955367",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"BOOKINGSERVICE",
+						"api",
+						"flight",
+						"booking",
+						"cancel",
+						"PNRF9955367"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ticket Via Email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzaHViaHJhbnNodV91c2VyIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NjUxNzM5NjEsImV4cCI6MTc2NTI2MDM2MX0.KPKmhotUl_pLW0eu27wlg_mCOX4skNPkFqlwH8-I2HU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/BOOKINGSERVICE/api/flight/booking/history/testuser@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"BOOKINGSERVICE",
+						"api",
+						"flight",
+						"booking",
+						"history",
+						"testuser@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
