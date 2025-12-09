@@ -1,0 +1,470 @@
+2025-12-08 11:22:39.752 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 11:22:45.662 | 
+2025-12-08 11:22:45.662 |   .   ____          _            __ _ _
+2025-12-08 11:22:45.662 |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-12-08 11:22:45.662 | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-12-08 11:22:45.662 |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-12-08 11:22:45.662 |   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-12-08 11:22:45.662 |  =========|_|==============|___/=/_/_/_/
+2025-12-08 11:22:45.662 | 
+2025-12-08 11:22:45.667 |  :: Spring Boot ::                (v3.3.1)
+2025-12-08 11:22:45.667 | 
+2025-12-08 11:22:46.744 | 2025-12-08T05:52:46.740Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Starting EurekaserverApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2025-12-08 11:22:46.799 | 2025-12-08T05:52:46.796Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-08 11:23:00.514 | 2025-12-08T05:53:00.513Z  INFO 1 --- [eurekaserver] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c18b0fac-8510-379b-9a15-81fa6b831394
+2025-12-08 11:23:00.827 | 2025-12-08T05:53:00.826Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-08 11:23:00.841 | 2025-12-08T05:53:00.841Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-08 11:23:02.739 | 2025-12-08T05:53:02.739Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-12-08 11:23:02.830 | 2025-12-08T05:53:02.830Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-08 11:23:02.846 | 2025-12-08T05:53:02.831Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-12-08 11:23:03.121 | 2025-12-08T05:53:03.120Z  INFO 1 --- [eurekaserver] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-08 11:23:03.124 | 2025-12-08T05:53:03.123Z  INFO 1 --- [eurekaserver] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15308 ms
+2025-12-08 11:23:03.151 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 11:23:08.680 | 2025-12-08T05:53:08.676Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 11:23:08.681 | 2025-12-08T05:53:08.680Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 11:23:09.617 | 2025-12-08T05:53:09.615Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 11:23:09.618 | 2025-12-08T05:53:09.617Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 11:23:13.107 | 2025-12-08T05:53:13.106Z  WARN 1 --- [eurekaserver] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-08 11:23:13.237 | 2025-12-08T05:53:13.236Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-08 11:23:13.407 | 2025-12-08T05:53:13.407Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-08 11:23:13.407 | 2025-12-08T05:53:13.407Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-12-08 11:23:13.415 | 2025-12-08T05:53:13.414Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765173193412 with initial instances count: 0
+2025-12-08 11:23:13.571 | 2025-12-08T05:53:13.571Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-12-08 11:23:13.575 | 2025-12-08T05:53:13.575Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-12-08 11:23:13.867 | 2025-12-08T05:53:13.866Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 11:23:13.867 | 2025-12-08T05:53:13.867Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 11:23:13.868 | 2025-12-08T05:53:13.867Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 11:23:13.869 | 2025-12-08T05:53:13.867Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 11:23:14.034 | 2025-12-08T05:53:14.034Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-12-08 11:23:14.068 | 2025-12-08T05:53:14.067Z  INFO 1 --- [eurekaserver] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-12-08 11:23:14.068 | 2025-12-08T05:53:14.068Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-12-08 11:23:14.091 | 2025-12-08T05:53:14.091Z  INFO 1 --- [eurekaserver] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-08 11:23:14.258 | 2025-12-08T05:53:14.258Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-12-08 11:23:14.316 | 2025-12-08T05:53:14.315Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-12-08 11:23:14.319 | 2025-12-08T05:53:14.318Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-12-08 11:23:14.320 | 2025-12-08T05:53:14.319Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-12-08 11:23:14.320 | 2025-12-08T05:53:14.320Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-12-08 11:23:14.321 | 2025-12-08T05:53:14.320Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-12-08 11:23:14.335 | 2025-12-08T05:53:14.335Z  INFO 1 --- [eurekaserver] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-12-08 11:23:14.387 | 2025-12-08T05:53:14.386Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-12-08 11:23:14.399 | 2025-12-08T05:53:14.397Z  INFO 1 --- [eurekaserver] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-12-08 11:23:14.471 | 2025-12-08T05:53:14.470Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Started EurekaserverApplication in 32.469 seconds (process running for 40.199)
+2025-12-08 11:23:25.646 | 2025-12-08T05:53:25.645Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-08 11:23:25.646 | 2025-12-08T05:53:25.646Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-08 11:23:25.649 | 2025-12-08T05:53:25.648Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-08 11:23:37.826 | 2025-12-08T05:53:37.826Z  WARN 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 11:23:37.826 | 2025-12-08T05:53:37.826Z  WARN 1 --- [eurekaserver] [nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Renew): APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 11:23:37.980 | 2025-12-08T05:53:37.980Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=false)
+2025-12-08 11:23:38.669 | 2025-12-08T05:53:38.668Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=true)
+2025-12-08 11:23:40.855 | 2025-12-08T05:53:40.854Z  WARN 1 --- [eurekaserver] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 11:23:40.855 | 2025-12-08T05:53:40.855Z  WARN 1 --- [eurekaserver] [nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 11:23:40.913 | 2025-12-08T05:53:40.912Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=false)
+2025-12-08 11:23:41.224 | 2025-12-08T05:53:41.223Z  WARN 1 --- [eurekaserver] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 11:23:41.224 | 2025-12-08T05:53:41.223Z  WARN 1 --- [eurekaserver] [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 11:23:41.258 | 2025-12-08T05:53:41.257Z  INFO 1 --- [eurekaserver] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=false)
+2025-12-08 11:23:41.423 | 2025-12-08T05:53:41.422Z  INFO 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=true)
+2025-12-08 11:23:41.423 | 2025-12-08T05:53:41.423Z  INFO 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=true)
+2025-12-08 11:23:43.676 | 2025-12-08T05:53:43.675Z  WARN 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: BOOKINGSERVICE - c430955764a9:bookingservice:8081
+2025-12-08 11:23:43.676 | 2025-12-08T05:53:43.676Z  WARN 1 --- [eurekaserver] [nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Renew): BOOKINGSERVICE - c430955764a9:bookingservice:8081
+2025-12-08 11:23:43.728 | 2025-12-08T05:53:43.728Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=false)
+2025-12-08 11:23:44.239 | 2025-12-08T05:53:44.239Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=true)
+2025-12-08 11:24:14.325 | 2025-12-08T05:54:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-12-08 11:25:14.325 | 2025-12-08T05:55:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2025-12-08 11:26:14.324 | 2025-12-08T05:56:14.323Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:27:14.324 | 2025-12-08T05:57:14.323Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 11:28:14.326 | 2025-12-08T05:58:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 11:29:14.325 | 2025-12-08T05:59:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 11:30:14.325 | 2025-12-08T06:00:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 11:31:14.337 | 2025-12-08T06:01:14.331Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 11:32:14.325 | 2025-12-08T06:02:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 11:33:14.326 | 2025-12-08T06:03:14.324Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 11:34:14.326 | 2025-12-08T06:04:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 11:35:14.326 | 2025-12-08T06:05:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 11:36:14.326 | 2025-12-08T06:06:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 11:37:14.326 | 2025-12-08T06:07:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 11:38:14.069 | 2025-12-08T06:08:14.069Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 11:38:14.326 | 2025-12-08T06:08:14.326Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 11:39:14.326 | 2025-12-08T06:09:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:40:14.326 | 2025-12-08T06:10:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:41:14.326 | 2025-12-08T06:11:14.326Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:42:14.326 | 2025-12-08T06:12:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-12-08 11:43:14.326 | 2025-12-08T06:13:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-12-08 11:44:14.326 | 2025-12-08T06:14:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-12-08 11:45:14.326 | 2025-12-08T06:15:14.325Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:46:14.326 | 2025-12-08T06:16:14.326Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-12-08 11:47:14.339 | 2025-12-08T06:17:14.338Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 11:48:14.327 | 2025-12-08T06:18:14.326Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-12-08 11:48:41.022 | 2025-12-08T06:18:41.022Z  INFO 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=false)
+2025-12-08 11:48:41.044 | 2025-12-08T06:18:41.043Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=false)
+2025-12-08 11:48:41.049 | 2025-12-08T06:18:41.048Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=false)
+2025-12-08 11:48:41.071 | 2025-12-08T06:18:41.071Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=false)
+2025-12-08 11:48:41.552 | 2025-12-08T06:18:41.551Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=true)
+2025-12-08 11:48:41.552 | 2025-12-08T06:18:41.552Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=true)
+2025-12-08 11:48:41.553 | 2025-12-08T06:18:41.553Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=true)
+2025-12-08 11:48:41.554 | 2025-12-08T06:18:41.554Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=true)
+2025-12-08 11:48:43.615 | 2025-12-08T06:18:43.614Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
+2025-12-08 11:48:43.683 | 2025-12-08T06:18:43.682Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-12-08 11:48:43.683 | 2025-12-08T06:18:43.683Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 11:48:43.717 | 2025-12-08T06:18:43.717Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 11:48:43.717 | 2025-12-08T06:18:43.717Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-12-08 11:48:43.724 | 2025-12-08T06:18:43.724Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 11:48:43.724 | 2025-12-08T06:18:43.724Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 11:48:43.754 | 2025-12-08T06:18:43.753Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-08 11:48:43.755 | 2025-12-08T06:18:43.754Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-12-08 18:06:14.334 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 18:06:26.678 | 
+2025-12-08 18:06:26.678 |   .   ____          _            __ _ _
+2025-12-08 18:06:26.678 |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-12-08 18:06:26.678 | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-12-08 18:06:26.678 |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-12-08 18:06:26.678 |   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-12-08 18:06:26.678 |  =========|_|==============|___/=/_/_/_/
+2025-12-08 18:06:26.678 | 
+2025-12-08 18:06:26.682 |  :: Spring Boot ::                (v3.3.1)
+2025-12-08 18:06:26.682 | 
+2025-12-08 18:06:27.577 | 2025-12-08T12:36:27.555Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Starting EurekaserverApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2025-12-08 18:06:27.588 | 2025-12-08T12:36:27.587Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-08 18:06:41.506 | 2025-12-08T12:36:41.506Z  INFO 1 --- [eurekaserver] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c18b0fac-8510-379b-9a15-81fa6b831394
+2025-12-08 18:06:42.074 | 2025-12-08T12:36:42.064Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-08 18:06:42.118 | 2025-12-08T12:36:42.099Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-08 18:06:44.528 | 2025-12-08T12:36:44.526Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-12-08 18:06:44.715 | 2025-12-08T12:36:44.714Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-08 18:06:44.716 | 2025-12-08T12:36:44.715Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-12-08 18:06:45.067 | 2025-12-08T12:36:45.066Z  INFO 1 --- [eurekaserver] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-08 18:06:45.081 | 2025-12-08T12:36:45.080Z  INFO 1 --- [eurekaserver] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 16716 ms
+2025-12-08 18:06:45.088 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 18:06:55.397 | 2025-12-08T12:36:55.392Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 18:06:55.397 | 2025-12-08T12:36:55.395Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 18:06:57.934 | 2025-12-08T12:36:57.925Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 18:06:57.934 | 2025-12-08T12:36:57.934Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 18:07:06.088 | 2025-12-08T12:37:06.088Z  WARN 1 --- [eurekaserver] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-08 18:07:06.254 | 2025-12-08T12:37:06.253Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-08 18:07:06.495 | 2025-12-08T12:37:06.494Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-08 18:07:06.495 | 2025-12-08T12:37:06.495Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-12-08 18:07:06.503 | 2025-12-08T12:37:06.498Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765197426497 with initial instances count: 0
+2025-12-08 18:07:06.855 | 2025-12-08T12:37:06.853Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-12-08 18:07:06.858 | 2025-12-08T12:37:06.857Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-12-08 18:07:08.182 | 2025-12-08T12:37:08.181Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 18:07:08.182 | 2025-12-08T12:37:08.181Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 18:07:08.182 | 2025-12-08T12:37:08.182Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 18:07:08.187 | 2025-12-08T12:37:08.182Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 18:07:08.809 | 2025-12-08T12:37:08.808Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-12-08 18:07:08.892 | 2025-12-08T12:37:08.885Z  INFO 1 --- [eurekaserver] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-12-08 18:07:08.892 | 2025-12-08T12:37:08.886Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-12-08 18:07:08.940 | 2025-12-08T12:37:08.929Z  INFO 1 --- [eurekaserver] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-08 18:07:09.171 | 2025-12-08T12:37:09.150Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-12-08 18:07:09.290 | 2025-12-08T12:37:09.289Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-12-08 18:07:09.291 | 2025-12-08T12:37:09.290Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-12-08 18:07:09.291 | 2025-12-08T12:37:09.291Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-12-08 18:07:09.292 | 2025-12-08T12:37:09.291Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-12-08 18:07:09.292 | 2025-12-08T12:37:09.292Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-12-08 18:07:09.319 | 2025-12-08T12:37:09.314Z  INFO 1 --- [eurekaserver] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-12-08 18:07:09.453 | 2025-12-08T12:37:09.452Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-12-08 18:07:09.458 | 2025-12-08T12:37:09.457Z  INFO 1 --- [eurekaserver] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-12-08 18:07:09.586 | 2025-12-08T12:37:09.585Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Started EurekaserverApplication in 46.884 seconds (process running for 62.579)
+2025-12-08 18:07:11.390 | 2025-12-08T12:37:11.389Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-08 18:07:11.390 | 2025-12-08T12:37:11.389Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-08 18:07:11.393 | 2025-12-08T12:37:11.392Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-08 18:07:12.061 | 2025-12-08T12:37:12.060Z  INFO 1 --- [eurekaserver] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=false)
+2025-12-08 18:07:12.812 | 2025-12-08T12:37:12.812Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=true)
+2025-12-08 18:07:31.039 | 2025-12-08T12:37:31.038Z  WARN 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 18:07:31.039 | 2025-12-08T12:37:31.039Z  WARN 1 --- [eurekaserver] [nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Renew): APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 18:07:31.214 | 2025-12-08T12:37:31.214Z  INFO 1 --- [eurekaserver] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=false)
+2025-12-08 18:07:31.725 | 2025-12-08T12:37:31.725Z  INFO 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=true)
+2025-12-08 18:07:33.915 | 2025-12-08T12:37:33.915Z  WARN 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 18:07:33.916 | 2025-12-08T12:37:33.915Z  WARN 1 --- [eurekaserver] [nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Renew): FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 18:07:33.948 | 2025-12-08T12:37:33.948Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=false)
+2025-12-08 18:07:34.472 | 2025-12-08T12:37:34.471Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=true)
+2025-12-08 18:07:37.741 | 2025-12-08T12:37:37.740Z  WARN 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 18:07:37.741 | 2025-12-08T12:37:37.740Z  WARN 1 --- [eurekaserver] [nio-8761-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Renew): AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 18:07:37.754 | 2025-12-08T12:37:37.754Z  INFO 1 --- [eurekaserver] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=false)
+2025-12-08 18:07:38.262 | 2025-12-08T12:37:38.261Z  INFO 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=true)
+2025-12-08 18:08:09.295 | 2025-12-08T12:38:09.295Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-12-08 18:09:09.294 | 2025-12-08T12:39:09.294Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-12-08 18:10:09.295 | 2025-12-08T12:40:09.294Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-12-08 18:11:09.296 | 2025-12-08T12:41:09.295Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-12-08 18:12:09.295 | 2025-12-08T12:42:09.294Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-12-08 18:13:09.295 | 2025-12-08T12:43:09.294Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 18:13:35.439 | 2025-12-08T12:43:35.438Z  INFO 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=false)
+2025-12-08 18:13:35.446 | 2025-12-08T12:43:35.445Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=false)
+2025-12-08 18:13:35.450 | 2025-12-08T12:43:35.449Z  INFO 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=false)
+2025-12-08 18:13:35.450 | 2025-12-08T12:43:35.444Z  INFO 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=false)
+2025-12-08 18:13:35.956 | 2025-12-08T12:43:35.955Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=true)
+2025-12-08 18:13:35.956 | 2025-12-08T12:43:35.956Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=true)
+2025-12-08 18:13:35.957 | 2025-12-08T12:43:35.957Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=true)
+2025-12-08 18:13:35.957 | 2025-12-08T12:43:35.957Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=true)
+2025-12-08 18:13:37.760 | 2025-12-08T12:43:37.759Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
+2025-12-08 18:13:37.774 | 2025-12-08T12:43:37.774Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-12-08 18:13:37.775 | 2025-12-08T12:43:37.774Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 18:13:37.787 | 2025-12-08T12:43:37.786Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 18:13:37.787 | 2025-12-08T12:43:37.787Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-12-08 18:13:37.789 | 2025-12-08T12:43:37.777Z ERROR 1 --- [eurekaserver] [t-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+2025-12-08 18:13:37.789 | 
+2025-12-08 18:13:37.789 | java.lang.IllegalStateException: Client instance has been closed.
+2025-12-08 18:13:37.789 | 	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.7.jar!/:na]
+2025-12-08 18:13:37.789 | 	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 18:13:37.789 | 	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 18:13:37.789 | 	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 18:13:37.789 | 	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.3.jar!/:2.0.3]
+2025-12-08 18:13:37.789 | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+2025-12-08 18:13:37.789 | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+2025-12-08 18:13:37.789 | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+2025-12-08 18:13:37.789 | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+2025-12-08 18:13:37.789 | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+2025-12-08 18:13:37.789 | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2025-12-08 18:13:37.789 | 
+2025-12-08 18:13:37.789 | 2025-12-08T12:43:37.789Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 18:13:37.789 | 2025-12-08T12:43:37.789Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 18:13:37.799 | 2025-12-08T12:43:37.798Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-08 18:13:37.800 | 2025-12-08T12:43:37.799Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-12-08 21:34:17.654 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 21:34:40.470 | 
+2025-12-08 21:34:40.470 |   .   ____          _            __ _ _
+2025-12-08 21:34:40.470 |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-12-08 21:34:40.470 | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-12-08 21:34:40.470 |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-12-08 21:34:40.470 |   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-12-08 21:34:40.470 |  =========|_|==============|___/=/_/_/_/
+2025-12-08 21:34:40.470 | 
+2025-12-08 21:34:40.470 |  :: Spring Boot ::                (v3.3.1)
+2025-12-08 21:34:40.470 | 
+2025-12-08 21:34:43.706 | 2025-12-08T16:04:43.614Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Starting EurekaserverApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2025-12-08 21:34:43.799 | 2025-12-08T16:04:43.791Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-08 21:35:12.704 | 2025-12-08T16:05:12.704Z  INFO 1 --- [eurekaserver] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c18b0fac-8510-379b-9a15-81fa6b831394
+2025-12-08 21:35:13.915 | 2025-12-08T16:05:13.914Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-08 21:35:13.949 | 2025-12-08T16:05:13.949Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-08 21:35:18.747 | 2025-12-08T16:05:18.740Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-12-08 21:35:19.104 | 2025-12-08T16:05:19.103Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-08 21:35:19.107 | 2025-12-08T16:05:19.105Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-12-08 21:35:19.688 | 2025-12-08T16:05:19.684Z  INFO 1 --- [eurekaserver] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-08 21:35:19.721 | 2025-12-08T16:05:19.716Z  INFO 1 --- [eurekaserver] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 33975 ms
+2025-12-08 21:35:19.784 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-08 21:35:39.707 | 2025-12-08T16:05:39.677Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 21:35:39.708 | 2025-12-08T16:05:39.707Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 21:35:45.073 | 2025-12-08T16:05:45.058Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 21:35:45.073 | 2025-12-08T16:05:45.069Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 21:36:04.600 | 2025-12-08T16:06:04.599Z  WARN 1 --- [eurekaserver] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-08 21:36:04.982 | 2025-12-08T16:06:04.981Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-08 21:36:05.272 | 2025-12-08T16:06:05.271Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-08 21:36:05.273 | 2025-12-08T16:06:05.272Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-12-08 21:36:05.279 | 2025-12-08T16:06:05.278Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765209965276 with initial instances count: 0
+2025-12-08 21:36:05.907 | 2025-12-08T16:06:05.906Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-12-08 21:36:05.913 | 2025-12-08T16:06:05.913Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-12-08 21:36:07.098 | 2025-12-08T16:06:07.095Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-08 21:36:07.099 | 2025-12-08T16:06:07.098Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-08 21:36:07.107 | 2025-12-08T16:06:07.099Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-08 21:36:07.107 | 2025-12-08T16:06:07.099Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-08 21:36:07.706 | 2025-12-08T16:06:07.705Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-12-08 21:36:07.827 | 2025-12-08T16:06:07.826Z  INFO 1 --- [eurekaserver] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-12-08 21:36:07.827 | 2025-12-08T16:06:07.827Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-12-08 21:36:07.940 | 2025-12-08T16:06:07.939Z  INFO 1 --- [eurekaserver] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-08 21:36:08.376 | 2025-12-08T16:06:08.375Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-12-08 21:36:08.471 | 2025-12-08T16:06:08.470Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-12-08 21:36:08.472 | 2025-12-08T16:06:08.472Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-12-08 21:36:08.473 | 2025-12-08T16:06:08.472Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-12-08 21:36:08.473 | 2025-12-08T16:06:08.473Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-12-08 21:36:08.473 | 2025-12-08T16:06:08.473Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-12-08 21:36:08.481 | 2025-12-08T16:06:08.480Z  INFO 1 --- [eurekaserver] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-12-08 21:36:08.617 | 2025-12-08T16:06:08.614Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-12-08 21:36:08.621 | 2025-12-08T16:06:08.620Z  INFO 1 --- [eurekaserver] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-12-08 21:36:08.784 | 2025-12-08T16:06:08.782Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Started EurekaserverApplication in 100.822 seconds (process running for 115.041)
+2025-12-08 21:36:10.096 | 2025-12-08T16:06:10.094Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-08 21:36:10.097 | 2025-12-08T16:06:10.096Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-08 21:36:10.101 | 2025-12-08T16:06:10.100Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-08 21:36:10.912 | 2025-12-08T16:06:10.911Z  INFO 1 --- [eurekaserver] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=false)
+2025-12-08 21:36:12.157 | 2025-12-08T16:06:12.156Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=true)
+2025-12-08 21:36:27.694 | 2025-12-08T16:06:27.694Z  WARN 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 21:36:27.694 | 2025-12-08T16:06:27.694Z  WARN 1 --- [eurekaserver] [nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Renew): APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-08 21:36:27.745 | 2025-12-08T16:06:27.744Z  INFO 1 --- [eurekaserver] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=false)
+2025-12-08 21:36:28.260 | 2025-12-08T16:06:28.259Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=true)
+2025-12-08 21:36:34.163 | 2025-12-08T16:06:34.162Z  WARN 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 21:36:34.163 | 2025-12-08T16:06:34.162Z  WARN 1 --- [eurekaserver] [nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-08 21:36:34.182 | 2025-12-08T16:06:34.182Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=false)
+2025-12-08 21:36:34.696 | 2025-12-08T16:06:34.695Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=true)
+2025-12-08 21:36:36.756 | 2025-12-08T16:06:36.756Z  WARN 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 21:36:36.759 | 2025-12-08T16:06:36.756Z  WARN 1 --- [eurekaserver] [nio-8761-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Renew): AUTHSERVICE - e0d24547093b:authservice:8001
+2025-12-08 21:36:36.787 | 2025-12-08T16:06:36.786Z  INFO 1 --- [eurekaserver] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=false)
+2025-12-08 21:36:37.302 | 2025-12-08T16:06:37.301Z  INFO 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=true)
+2025-12-08 21:37:08.477 | 2025-12-08T16:07:08.476Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-12-08 21:38:08.476 | 2025-12-08T16:08:08.476Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:39:08.477 | 2025-12-08T16:09:08.476Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:40:08.477 | 2025-12-08T16:10:08.476Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:41:08.478 | 2025-12-08T16:11:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 21:42:08.477 | 2025-12-08T16:12:08.476Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 21:43:08.477 | 2025-12-08T16:13:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2025-12-08 21:44:08.478 | 2025-12-08T16:14:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 21:45:08.479 | 2025-12-08T16:15:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 21:46:08.478 | 2025-12-08T16:16:08.478Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:47:08.479 | 2025-12-08T16:17:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 21:48:08.478 | 2025-12-08T16:18:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:49:08.478 | 2025-12-08T16:19:08.477Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 19ms
+2025-12-08 21:50:08.480 | 2025-12-08T16:20:08.478Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 18ms
+2025-12-08 21:51:07.827 | 2025-12-08T16:21:07.826Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 21:51:08.479 | 2025-12-08T16:21:08.478Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-12-08 21:52:08.479 | 2025-12-08T16:22:08.479Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-12-08 21:53:08.479 | 2025-12-08T16:23:08.478Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-12-08 21:54:08.480 | 2025-12-08T16:24:08.479Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 18ms
+2025-12-08 21:55:08.482 | 2025-12-08T16:25:08.480Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 21:56:08.481 | 2025-12-08T16:26:08.480Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-12-08 21:57:08.481 | 2025-12-08T16:27:08.480Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 17ms
+2025-12-08 21:58:08.480 | 2025-12-08T16:28:08.480Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 21:59:08.481 | 2025-12-08T16:29:08.481Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 22:00:08.482 | 2025-12-08T16:30:08.481Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 22:01:08.484 | 2025-12-08T16:31:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2025-12-08 22:02:08.484 | 2025-12-08T16:32:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2025-12-08 22:03:08.483 | 2025-12-08T16:33:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:04:08.482 | 2025-12-08T16:34:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:05:08.483 | 2025-12-08T16:35:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:06:07.830 | 2025-12-08T16:36:07.829Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 22:06:08.483 | 2025-12-08T16:36:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:07:08.484 | 2025-12-08T16:37:08.482Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:08:08.484 | 2025-12-08T16:38:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:09:08.484 | 2025-12-08T16:39:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:10:08.485 | 2025-12-08T16:40:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:11:08.485 | 2025-12-08T16:41:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:12:08.484 | 2025-12-08T16:42:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:13:08.485 | 2025-12-08T16:43:08.484Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:14:08.491 | 2025-12-08T16:44:08.483Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:15:08.485 | 2025-12-08T16:45:08.484Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:16:08.485 | 2025-12-08T16:46:08.484Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:17:08.485 | 2025-12-08T16:47:08.484Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:18:08.485 | 2025-12-08T16:48:08.484Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:19:08.486 | 2025-12-08T16:49:08.485Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:20:08.487 | 2025-12-08T16:50:08.486Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:21:07.831 | 2025-12-08T16:51:07.829Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 22:21:08.488 | 2025-12-08T16:51:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 22:22:08.489 | 2025-12-08T16:52:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-12-08 22:23:08.489 | 2025-12-08T16:53:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:24:08.489 | 2025-12-08T16:54:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:25:08.488 | 2025-12-08T16:55:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-12-08 22:26:08.487 | 2025-12-08T16:56:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:27:08.488 | 2025-12-08T16:57:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:28:08.488 | 2025-12-08T16:58:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2025-12-08 22:29:08.488 | 2025-12-08T16:59:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:30:08.488 | 2025-12-08T17:00:08.488Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-12-08 22:31:08.488 | 2025-12-08T17:01:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:32:08.489 | 2025-12-08T17:02:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:33:08.488 | 2025-12-08T17:03:08.488Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:34:08.489 | 2025-12-08T17:04:08.488Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2025-12-08 22:35:08.488 | 2025-12-08T17:05:08.488Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:36:07.832 | 2025-12-08T17:06:07.832Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 22:36:08.488 | 2025-12-08T17:06:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:37:08.488 | 2025-12-08T17:07:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:38:08.488 | 2025-12-08T17:08:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:39:08.488 | 2025-12-08T17:09:08.487Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:40:08.489 | 2025-12-08T17:10:08.488Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:41:08.489 | 2025-12-08T17:11:08.489Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:42:08.490 | 2025-12-08T17:12:08.489Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:43:08.491 | 2025-12-08T17:13:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:44:08.492 | 2025-12-08T17:14:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:45:08.491 | 2025-12-08T17:15:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-08 22:46:08.492 | 2025-12-08T17:16:08.491Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:47:08.490 | 2025-12-08T17:17:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-12-08 22:48:08.491 | 2025-12-08T17:18:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-12-08 22:49:08.492 | 2025-12-08T17:19:08.491Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:50:08.491 | 2025-12-08T17:20:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:51:07.829 | 2025-12-08T17:21:07.829Z  INFO 1 --- [eurekaserver] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-12-08 22:51:08.491 | 2025-12-08T17:21:08.490Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-12-08 22:51:49.603 | 2025-12-08T17:21:49.602Z  INFO 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=false)
+2025-12-08 22:51:49.610 | 2025-12-08T17:21:49.607Z  INFO 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=false)
+2025-12-08 22:51:49.612 | 2025-12-08T17:21:49.611Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=false)
+2025-12-08 22:51:49.640 | 2025-12-08T17:21:49.639Z  INFO 1 --- [eurekaserver] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=false)
+2025-12-08 22:51:50.118 | 2025-12-08T17:21:50.118Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status DOWN (replication=true)
+2025-12-08 22:51:50.118 | 2025-12-08T17:21:50.118Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status DOWN (replication=true)
+2025-12-08 22:51:50.118 | 2025-12-08T17:21:50.118Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status DOWN (replication=true)
+2025-12-08 22:51:50.119 | 2025-12-08T17:21:50.119Z  INFO 1 --- [eurekaserver] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status DOWN (replication=true)
+2025-12-08 22:51:51.788 | 2025-12-08T17:21:51.788Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKASERVER with eureka with status DOWN
+2025-12-08 22:51:51.838 | 2025-12-08T17:21:51.838Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-12-08 22:51:51.838 | 2025-12-08T17:21:51.838Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 22:51:51.857 | 2025-12-08T17:21:51.843Z ERROR 1 --- [eurekaserver] [t-Conn-Cleaner2] c.n.d.s.t.j.EurekaJersey3ClientImpl      : Cannot clean connections
+2025-12-08 22:51:51.857 | 
+2025-12-08 22:51:51.857 | java.lang.IllegalStateException: Client instance has been closed.
+2025-12-08 22:51:51.857 | 	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169) ~[jersey-common-3.1.7.jar!/:na]
+2025-12-08 22:51:51.857 | 	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 22:51:51.857 | 	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 22:51:51.857 | 	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54) ~[jersey-client-3.1.7.jar!/:na]
+2025-12-08 22:51:51.857 | 	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:338) ~[eureka-client-jersey3-2.0.3.jar!/:2.0.3]
+2025-12-08 22:51:51.857 | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+2025-12-08 22:51:51.857 | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+2025-12-08 22:51:51.858 | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+2025-12-08 22:51:51.858 | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+2025-12-08 22:51:51.858 | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+2025-12-08 22:51:51.858 | 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2025-12-08 22:51:51.858 | 
+2025-12-08 22:51:51.865 | 2025-12-08T17:21:51.864Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 22:51:51.865 | 2025-12-08T17:21:51.864Z  INFO 1 --- [eurekaserver] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-12-08 22:51:51.871 | 2025-12-08T17:21:51.871Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-12-08 22:51:51.872 | 2025-12-08T17:21:51.872Z  INFO 1 --- [eurekaserver] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-12-08 22:51:51.887 | 2025-12-08T17:21:51.886Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-12-08 22:51:51.887 | 2025-12-08T17:21:51.887Z  INFO 1 --- [eurekaserver] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-12-09 07:32:51.497 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-09 07:32:59.525 | 
+2025-12-09 07:32:59.525 |   .   ____          _            __ _ _
+2025-12-09 07:32:59.526 |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2025-12-09 07:32:59.526 | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2025-12-09 07:32:59.526 |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2025-12-09 07:32:59.526 |   '  |____| .__|_| |_|_| |_\__, | / / / /
+2025-12-09 07:32:59.526 |  =========|_|==============|___/=/_/_/_/
+2025-12-09 07:32:59.526 | 
+2025-12-09 07:32:59.527 |  :: Spring Boot ::                (v3.3.1)
+2025-12-09 07:32:59.527 | 
+2025-12-09 07:33:01.388 | 2025-12-09T02:03:01.324Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Starting EurekaserverApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2025-12-09 07:33:01.436 | 2025-12-09T02:03:01.430Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-09 07:33:26.794 | 2025-12-09T02:03:26.793Z  INFO 1 --- [eurekaserver] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c18b0fac-8510-379b-9a15-81fa6b831394
+2025-12-09 07:33:28.431 | 2025-12-09T02:03:28.429Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-12-09 07:33:28.465 | 2025-12-09T02:03:28.464Z  WARN 1 --- [eurekaserver] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-12-09 07:33:33.464 | 2025-12-09T02:03:33.463Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-12-09 07:33:33.648 | 2025-12-09T02:03:33.647Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09 07:33:33.649 | 2025-12-09T02:03:33.649Z  INFO 1 --- [eurekaserver] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-12-09 07:33:34.481 | 2025-12-09T02:03:34.468Z  INFO 1 --- [eurekaserver] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09 07:33:34.498 | 2025-12-09T02:03:34.498Z  INFO 1 --- [eurekaserver] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 32017 ms
+2025-12-09 07:33:34.597 | Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2025-12-09 07:33:50.751 | 2025-12-09T02:03:50.667Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-09 07:33:50.752 | 2025-12-09T02:03:50.751Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-09 07:33:55.153 | 2025-12-09T02:03:55.138Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-09 07:33:55.155 | 2025-12-09T02:03:55.155Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-09 07:34:03.833 | 2025-12-09T02:04:03.832Z  WARN 1 --- [eurekaserver] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-09 07:34:03.902 | 2025-12-09T02:04:03.900Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-12-09 07:34:03.999 | 2025-12-09T02:04:03.998Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-12-09 07:34:03.999 | 2025-12-09T02:04:03.999Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-12-09 07:34:04.002 | 2025-12-09T02:04:04.001Z  INFO 1 --- [eurekaserver] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1765245844000 with initial instances count: 0
+2025-12-09 07:34:04.279 | 2025-12-09T02:04:04.278Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-12-09 07:34:04.295 | 2025-12-09T02:04:04.295Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2025-12-09 07:34:04.998 | 2025-12-09T02:04:04.998Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-12-09 07:34:04.998 | 2025-12-09T02:04:04.998Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-12-09 07:34:04.998 | 2025-12-09T02:04:04.998Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-12-09 07:34:04.999 | 2025-12-09T02:04:04.998Z  INFO 1 --- [eurekaserver] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-12-09 07:34:05.509 | 2025-12-09T02:04:05.508Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2025-12-09 07:34:05.567 | 2025-12-09T02:04:05.564Z  INFO 1 --- [eurekaserver] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-12-09 07:34:05.567 | 2025-12-09T02:04:05.565Z  INFO 1 --- [eurekaserver] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-12-09 07:34:05.593 | 2025-12-09T02:04:05.591Z  INFO 1 --- [eurekaserver] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-09 07:34:05.804 | 2025-12-09T02:04:05.804Z  INFO 1 --- [eurekaserver] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKASERVER with eureka with status UP
+2025-12-09 07:34:05.903 | 2025-12-09T02:04:05.903Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-12-09 07:34:05.904 | 2025-12-09T02:04:05.904Z  INFO 1 --- [eurekaserver] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-12-09 07:34:05.904 | 2025-12-09T02:04:05.904Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-12-09 07:34:05.904 | 2025-12-09T02:04:05.904Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-12-09 07:34:05.905 | 2025-12-09T02:04:05.905Z  INFO 1 --- [eurekaserver] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-12-09 07:34:05.909 | 2025-12-09T02:04:05.908Z  INFO 1 --- [eurekaserver] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-12-09 07:34:06.057 | 2025-12-09T02:04:06.057Z  INFO 1 --- [eurekaserver] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-12-09 07:34:06.059 | 2025-12-09T02:04:06.059Z  INFO 1 --- [eurekaserver] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-12-09 07:34:06.156 | 2025-12-09T02:04:06.156Z  INFO 1 --- [eurekaserver] [           main] c.eurekaserver.EurekaserverApplication   : Started EurekaserverApplication in 71.655 seconds (process running for 78.422)
+2025-12-09 07:34:06.380 | 2025-12-09T02:04:06.376Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09 07:34:06.380 | 2025-12-09T02:04:06.377Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09 07:34:06.409 | 2025-12-09T02:04:06.407Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2025-12-09 07:34:07.119 | 2025-12-09T02:04:07.119Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=false)
+2025-12-09 07:34:07.440 | 2025-12-09T02:04:07.439Z  INFO 1 --- [eurekaserver] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=false)
+2025-12-09 07:34:07.849 | 2025-12-09T02:04:07.848Z  INFO 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTHSERVICE/e0d24547093b:authservice:8001 with status UP (replication=true)
+2025-12-09 07:34:07.851 | 2025-12-09T02:04:07.850Z  INFO 1 --- [eurekaserver] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BOOKINGSERVICE/c430955764a9:bookingservice:8081 with status UP (replication=true)
+2025-12-09 07:34:29.090 | 2025-12-09T02:04:29.090Z  WARN 1 --- [eurekaserver] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-09 07:34:29.091 | 2025-12-09T02:04:29.090Z  WARN 1 --- [eurekaserver] [nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Renew): APIGATEWAY - a477ad37a235:apigateway:8088
+2025-12-09 07:34:29.177 | 2025-12-09T02:04:29.176Z  INFO 1 --- [eurekaserver] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=false)
+2025-12-09 07:34:29.690 | 2025-12-09T02:04:29.690Z  INFO 1 --- [eurekaserver] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance APIGATEWAY/a477ad37a235:apigateway:8088 with status UP (replication=true)
+2025-12-09 07:34:31.665 | 2025-12-09T02:04:31.665Z  WARN 1 --- [eurekaserver] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-09 07:34:31.665 | 2025-12-09T02:04:31.665Z  WARN 1 --- [eurekaserver] [io-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Renew): FLIGHTSERVICE - 0d53e8585415:flightservice:8082
+2025-12-09 07:34:31.698 | 2025-12-09T02:04:31.698Z  INFO 1 --- [eurekaserver] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=false)
+2025-12-09 07:34:32.216 | 2025-12-09T02:04:32.216Z  INFO 1 --- [eurekaserver] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance FLIGHTSERVICE/0d53e8585415:flightservice:8082 with status UP (replication=true)
+2025-12-09 07:35:05.907 | 2025-12-09T02:05:05.906Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-12-09 07:36:05.907 | 2025-12-09T02:06:05.907Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2025-12-09 07:37:05.908 | 2025-12-09T02:07:05.907Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-12-09 07:38:05.908 | 2025-12-09T02:08:05.907Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-12-09 07:39:05.907 | 2025-12-09T02:09:05.907Z  INFO 1 --- [eurekaserver] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9msS
