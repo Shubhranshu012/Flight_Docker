@@ -59,6 +59,7 @@ class HistoryTests {
                 .name("Rohit").gender(GENDER.MALE).age(28).seatNumber("12A").mealOption("VEG").build();
 
         when(bookingRepo.findByPnrAndStatus(pnr, BOOKING_STATUS.BOOKED)).thenReturn(booking);
+        when(bookingRepo.findByPnrAndStatus("pnrInvalid", BOOKING_STATUS.BOOKED)).thenReturn(null);
 
         when(bookingRepo.findByPnrAndStatus("INVALID",BOOKING_STATUS.BOOKED)).thenReturn(null);
 
@@ -78,6 +79,13 @@ class HistoryTests {
 
         mockMvc.perform(get("/api/flight/ticket/" + pnr))
                 .andExpect(status().isOk());
+    }
+    
+    @Test
+    void testGetHistory_BAD() throws Exception {
+
+        mockMvc.perform(get("/api/flight/ticket/" + "pnrInvalid"))
+                .andExpect(status().isNotFound());
     }
 
     @Test
