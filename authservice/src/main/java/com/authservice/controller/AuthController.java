@@ -1,5 +1,8 @@
 package com.authservice.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -29,14 +32,16 @@ public class AuthController {
 	    return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
     @PostMapping("/login")
-    public String login(@RequestBody User request) {
+    public Map<String,String> login(@RequestBody User request) {
 
         User user = userRepository.findByUsername(request.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
-
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new RuntimeException("Invalid Credentials");
         }
-
-        return jwtService.generateToken(user.getUsername(), user.getRole());
+        String Token=jwtService.generateToken(user.getUsername(), user.getRole());
+        Map<String,String> message=new HashMap<String,String> ();
+        message.put("token", Token);
+        message.put("role", user.getRole().name());
+        return message;
     }
 }

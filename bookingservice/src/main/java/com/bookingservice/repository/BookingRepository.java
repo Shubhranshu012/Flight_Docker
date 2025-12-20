@@ -12,6 +12,6 @@ public interface BookingRepository extends MongoRepository<Booking,String>{
 	
 	Booking findByPnrAndStatus(String pnr, BOOKING_STATUS status);
 	
-	List<Booking> findByEmailAndStatus(String email,BOOKING_STATUS status);
+	List<Booking> findByEmail(String email);
 
 }

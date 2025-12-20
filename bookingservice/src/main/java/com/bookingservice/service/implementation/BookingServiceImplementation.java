@@ -106,7 +106,7 @@ public class BookingServiceImplementation implements BookingService {
 	}
 	
 	public Object getTicket(String email) {
-		List<Booking> bookings = bookingRepo.findByEmailAndStatus(email, BOOKING_STATUS.BOOKED);
+		List<Booking> bookings = bookingRepo.findByEmail(email);
 		if (bookings == null || bookings.isEmpty()) {
 		    throw new NotFoundException("");
 		}

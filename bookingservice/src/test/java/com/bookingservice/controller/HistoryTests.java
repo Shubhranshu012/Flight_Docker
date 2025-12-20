@@ -63,9 +63,9 @@ class HistoryTests {
 
         when(bookingRepo.findByPnrAndStatus("INVALID",BOOKING_STATUS.BOOKED)).thenReturn(null);
 
-        when(bookingRepo.findByEmailAndStatus("test@gmail.com",BOOKING_STATUS.BOOKED)).thenReturn(List.of(booking));
+        when(bookingRepo.findByEmail("test@gmail.com")).thenReturn(List.of(booking));
 
-        when(bookingRepo.findByEmailAndStatus("INVALID",BOOKING_STATUS.BOOKED)).thenReturn(List.of());
+        when(bookingRepo.findByEmail("INVALID")).thenReturn(List.of());
 
         when(passengerRepo.findByBookingId(bookingId)).thenReturn(List.of(passenger));
 
