@@ -2,6 +2,7 @@ package com.authservice.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,22 +27,29 @@ public class AuthController {
 
 	@PostMapping("/register")
 	public ResponseEntity<Void> register(@RequestBody User user) {
+		Optional<User> users=userRepository.findByEmail(user.getEmail());
+		if(!users.isEmpty()) {
+			throw new RuntimeException("Email Already Exists");
+		}
 	    user.setPassword(passwordEncoder.encode(user.getPassword()));
 	    userRepository.save(user);
 
 	    return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
+	
     @PostMapping("/login")
     public Map<String,String> login(@RequestBody User request) {
 
-        User user = userRepository.findByUsername(request.getUsername()).orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new RuntimeException("Email Not Found"));
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new RuntimeException("Invalid Credentials");
         }
-        String Token=jwtService.generateToken(user.getUsername(), user.getRole());
+        String Token=jwtService.generateToken(user.getEmail(), user.getRole());
         Map<String,String> message=new HashMap<String,String> ();
         message.put("token", Token);
         message.put("role", user.getRole().name());
         return message;
     }
+    
+    
 }
