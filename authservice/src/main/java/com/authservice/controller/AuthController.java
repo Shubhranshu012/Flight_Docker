@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
+
+import com.authservice.dto.UpdatePasswordRequest;
 import com.authservice.model.User;
 import com.authservice.repository.UserRepository;
 import com.authservice.security.JwtService;
@@ -50,6 +52,26 @@ public class AuthController {
         message.put("role", user.getRole().name());
         return message;
     }
+    
+    @PostMapping("/change")
+    public Map<String, String> updatePassword(@RequestBody UpdatePasswordRequest request) {
+    		
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new RuntimeException("Email Not Found"));
+        System.out.println(request);
+        if (!passwordEncoder.matches(request.getOldPassword(), user.getPassword())) {
+            throw new RuntimeException("Old password is incorrect");
+        }
+
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        userRepository.save(user);
+
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Password updated successfully");
+
+        return response;
+    }
+
+    
     
     
 }
