@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 
 import com.authservice.dto.UpdatePasswordRequest;
+import com.authservice.model.EROLE;
 import com.authservice.model.User;
 import com.authservice.repository.UserRepository;
 import com.authservice.security.JwtService;
@@ -29,6 +30,9 @@ public class AuthController {
 
 	@PostMapping("/register")
 	public ResponseEntity<Void> register(@RequestBody User user) {
+		if(user.getRole()== EROLE.ADMIN) {
+			throw new RuntimeException("Admin Register Not Allowed");
+		}
 		Optional<User> users=userRepository.findByEmail(user.getEmail());
 		if(!users.isEmpty()) {
 			throw new RuntimeException("Email Already Exists");
