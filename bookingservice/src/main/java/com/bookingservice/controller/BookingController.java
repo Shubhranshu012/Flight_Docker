@@ -1,6 +1,7 @@
 package com.bookingservice.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,13 @@ public class BookingController {
 		Map<String,String> responce=new HashMap<>();
 		responce.put("pnr", pnr);
 		return ResponseEntity.status(HttpStatus.CREATED).body(responce);
+	}
+	@GetMapping("/api/flight/seats/{flightId}")
+	public ResponseEntity<Map<String,List<String>>> book(@PathVariable String flightId) {
+		List<String> seats = bookingService.seats(flightId);
+		Map<String,List<String>> responce=new HashMap<>();
+		responce.put("Seats", seats);
+		return ResponseEntity.status(HttpStatus.OK).body(responce);
 	}
 	@GetMapping("/api/flight/ticket/{pnr}")
 	public Object history(@PathVariable String pnr){

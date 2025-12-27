@@ -28,6 +28,9 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
         if (path.startsWith("/FLIGHTSERVICE/api/flight/search")) {
             return chain.filter(exchange);
         }
+        if (path.startsWith("/FLIGHTSERVICE/api/airports")) {
+            return chain.filter(exchange);
+        }
 
         String authHeader = exchange.getRequest().getHeaders().getFirst("Authorization");
 

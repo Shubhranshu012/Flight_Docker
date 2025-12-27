@@ -1,5 +1,6 @@
 package com.authservice.controller;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -38,6 +39,8 @@ public class AuthController {
 			throw new RuntimeException("Email Already Exists");
 		}
 	    user.setPassword(passwordEncoder.encode(user.getPassword()));
+	    LocalDateTime newDate = LocalDateTime.now();
+        user.setLastDate(newDate);
 	    userRepository.save(user);
 
 	    return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -54,6 +57,7 @@ public class AuthController {
         Map<String,String> message=new HashMap<String,String> ();
         message.put("token", Token);
         message.put("role", user.getRole().name());
+        message.put("lastDate", user.getLastDate() != null ? user.getLastDate().toString() : "");
         return message;
     }
     
@@ -67,6 +71,8 @@ public class AuthController {
         }
 
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        LocalDateTime newDate = LocalDateTime.now();
+        user.setLastDate(newDate);
         userRepository.save(user);
 
         Map<String, String> response = new HashMap<>();

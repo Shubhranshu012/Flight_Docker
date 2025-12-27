@@ -11,9 +11,5 @@ public interface PassengerRepository extends MongoRepository<Passenger, String> 
 
     List<Passenger> findByBookingId(String bookingId);
     
-    @Aggregation(pipeline = {
-    	    "{ '$match': { 'flightInventoryId': ?0, 'status': 'BOOKED' }}",
-    	    "{ '$project': { '_id': 0, 'seatNumber': 1 }}"
-    })
-    String findSeatNumbersByFlightInventoryId(String flightInventoryId);
+    List<Passenger> findByFlightInventoryId(String flightInventoryId);
 }

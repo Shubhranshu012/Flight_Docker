@@ -111,6 +111,9 @@ public class FlightServiceImplment implements FlightService {
         return response;
     }
 	
+	public List<FlightInventory> getAll(){
+		return inventoryRepo.findAll();
+	}
 	public FlightInventory searchFlightBasedOnFlightNumber(String flightNumber){
 		Optional<FlightInventory> inventory=inventoryRepo.findById(flightNumber);
 		if(inventory.isEmpty()) {

@@ -1,5 +1,6 @@
 package com.bookingservice.service.implementation;
 
+import java.util.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,7 +84,14 @@ public class BookingServiceImplementation implements BookingService {
 		
 		return pnr;
 	}
-
+	public List<String> seats(String flightId) {
+	    List<Passenger> allPassengers =passengerRepo.findByFlightInventoryId(flightId);
+	    List<String> allSeats = new ArrayList<>();
+	    for (int i = 0; i < allPassengers.size(); i++) {
+	        allSeats.add(allPassengers.get(i).getSeatNumber());
+	    }
+	    return allSeats;
+	}
 	private Passenger createPassenger(PassengerDto passengerDto, String bookingId, String flightId) {
 	    return Passenger.builder().bookingId(bookingId).flightInventoryId(flightId)
 	            .name(passengerDto.getName()).gender(GENDER.valueOf(passengerDto.getGender()

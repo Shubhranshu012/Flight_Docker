@@ -1,6 +1,8 @@
 package com.authservice.model;
 
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.*;
@@ -15,5 +17,6 @@ public class User {
     private String id;
     private String email;
     private String password;
+    private LocalDateTime lastDate;
     private EROLE role; 
 }
